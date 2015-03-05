@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!--
+Harmonic calculator 
+-->
+<html>
+    <head>
+        <title>Harmonic calculator</title>
+        <meta charset="UTF-8">
+        <script type="text/javascript" src="hCalc.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div class="calcWrapper">
+        <form name="hCalc" class="hCalc">
+            <div class="screen">
+                <div class="operationSign">
+                    <input name="currentOperationSign" type="text" value="" size="1" disabled>
+                </div>
+                <div class="output">
+                    <input name="outputField" type="text" value="0" disabled size="18" maxlength="18"/>
+                </div>
+                <div class="memory">
+                    <label>Memory:</label> <input name="memoryField" type="text" value="" size="10" disabled>
+                </div>
+            </div>
+
+            <div class="buttonsPad">
+                <div class="buttonsExtended">
+                    <input type="radio" name="mode" onchange="calc.mode('hex')" value="hex">HEX
+                    <input type="radio" name="mode" onchange="calc.mode('bin')" value="bin">BIN
+                    <input type="radio" name="mode" onchange="calc.mode('dec')" value="dec" id='decButton' checked>DEC
+                    <input type="radio" name="mode" onchange="calc.mode('rom')" value="rom">ROM
+                </div>
+                <div class="buttonsBase">
+
+                    <div class="digits">
+                        <button type="button" onclick="calc.memoryClear()">MC</button>
+                        <button type="button" onclick="calc.memoryPaste()">MR</button>
+                        <button type="button" onclick="calc.memoryPlus()">M+</button>
+                        <button type="button" onclick="calc.operationSimple('/')" name>/</button>
+                        <button type="button" onclick="calc.operationSimple('*')">X</button>
+                        <button type="button" onclick="calc.operationSimple('-')">-</button>
+                        <button type="button" onclick="calc.numPressed(7)">7</button>
+                        <button type="button" onclick="calc.numPressed(8)">8</button>
+                        <button type="button" onclick="calc.numPressed(9)">9</button>
+                        <button type="button" onclick="calc.numPressed(4)">4</button>
+                        <button type="button" onclick="calc.numPressed(5)">5</button>
+                        <button type="button" onclick="calc.numPressed(6)">6</button>
+                        <button type="button" onclick="calc.numPressed(1)">1</button>
+                        <button type="button" onclick="calc.numPressed(2)">2</button>
+                        <button type="button" onclick="calc.numPressed(3)">3</button>
+                        <button type="button" onclick="calc.numPressed(0)" class="buttonWide">0</button>
+                        <button type="button" onclick="calc.decimal()">,</button>
+                    </div>
+                    <div class="buttonsTall">
+                        <button type="button" onclick="calc.memoryMinus()">M-</button>
+                        <button type="button" onclick="calc.operationSimple('+')" class="buttonTall">+</button>
+                        <button type="button" onclick="calc.operationSimple('=')" class="buttonTall">=</button>
+                    </div>
+                    
+                    <button type="button" onclick="calc.delete()">DEL</button>
+                    <button type="button" onclick="calc.clearEntry()">CE</button>
+                    <button type="button" onclick="calc.plusMinus()" >&#177; </button>
+                    <button type="button" onclick="calc.exponentTwo()">x&sup2;</button>
+                    <button type="button" onclick="calc.clear()" class="buttonTall clear">C</button>
+
+                </div>
+                <div class="buttonsExtend"></div>
+            </div>
+        </form>
+        </div>
+        <script type="text/javascript">
+            calc = new HCalc(document.hCalc);
+        </script>
+    </body>
+</html>

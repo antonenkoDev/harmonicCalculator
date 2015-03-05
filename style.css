@@ -1,0 +1,84 @@
+.calcWrapper{
+    width: 330px;
+    padding: 10px 0px 10px 10px;
+    margin: 0 auto;
+    background-color: #999999;
+}
+.hCalc .screen{
+    padding: 10px 5px 5px 10px;
+    margin: 3px;
+    width: 295px;
+    height: 50px;
+    border: 1px grey solid;
+    border-radius: 10px;
+    background-color: #fff;
+}
+.hCalc .screen .operationSign{
+    width: 20px;
+    float:left;
+}
+.hCalc .screen .output{
+    float: right;
+    /*width: 280px;*/
+    clear: right;
+}
+.hCalc .screen input{
+    border: none;
+    background-color: #fff;
+    font-size: 18px;
+    line-height: 16px;
+}
+.hCalc .screen .memory{
+    clear: both;
+}
+.hCalc .screen .memory label,.hCalc .screen .memory input{
+    font-size: 12px;
+    line-height: normal;
+}
+.hCalc .screen .operationSign input{
+    width: 20px;
+    float: left;
+}
+.hCalc .screen .output input{
+    text-align: right;
+}
+.hCalc .buttonsPad{
+    width: 320px;
+}
+.hCalc .buttonsPad .digits{
+    width: 190px;
+    margin-right: 5px;
+    float: left;
+}
+.hCalc .buttonsPad button{
+    width: 56px;
+    height: 30px;
+    margin: 2px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+.hCalc .buttonsPad button.pressed,.hCalc .buttonsPad button:active{
+    background-color: grey;
+}
+.hCalc .buttonsPad .buttonWide{
+    width: 120px;
+}
+.hCalc .buttonsPad .buttonsTall{
+    width: 64px;
+    float: left;
+}
+.hCalc .buttonsPad .buttonTall{
+    height: 64px;
+}
+.hCalc .buttonsPad .buttonsTall .buttonTall{
+    height: 81px;
+}
+.hCalc .buttonsExtended button{
+    width: 52px;
+}
+.hCalc.disabled button{
+    background-color: grey;
+}
+.hCalc.disabled button.clear{
+    background-color: buttonface;
+}
